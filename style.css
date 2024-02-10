@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --lightness: 50;
+  --saturation: 50;
+  --rainbow-lightness: 50;
+}
+body {
+  align-items: center;
+  background: hsl(210, calc(var(--saturation, 50) * 1%), calc(var(--lightness, 30) * 1%)); /* Cambié el valor de luminosidad a 30 */
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.rainbow-cloud {
+  width: 95vmin;
+}
+.rainbow {
+  stroke: #000;
+  stroke-width: 0;
+}
+.rainbow__beam {
+  fill: hsl(var(--hue), 85%, calc(var(--rainbow-lightness, 100) * 1%));
+}
+.rainbow__red {
+  --hue: 2;
+}
+.rainbow__orange {
+  --hue: 22;
+}
+.rainbow__yellow {
+  --hue: 48;
+}
+.rainbow__green {
+  --hue: 90;
+}
+.rainbow__blue {
+  --hue: 200;
+}
+.rainbow__indigo {
+  --hue: 235;
+}
+.rainbow__violet {
+  --hue: 295;
+}
+.cloud__body {
+  fill: hsl(0, 0%, calc(var(--cloud-lightness, 65) * 1%));
+  stroke: #000;
+  stroke-width: 2px;
+}
+.cloud__mouth {
+  stroke: #000;
+  stroke-width: 2px;
+}
+.cloud__mouth--thrilled path:nth-of-type(2) {
+  stroke: none;
+}
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+}
